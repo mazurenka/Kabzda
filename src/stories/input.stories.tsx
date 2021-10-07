@@ -23,7 +23,7 @@ export const GetValueOfUncontrolledInputButtonPress = () => {
         setValue(el.value)
     }
 
-    return <><input ref={inputRef} id={'inputId'}/>
+    return <><input ref={inputRef}/>
         <button onClick={save}>save</button>
         - actual value: {value} </>
 }
