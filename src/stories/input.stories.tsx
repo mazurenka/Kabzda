@@ -12,7 +12,7 @@ export const TrackValueUncontrolledInput = () => {
     return <><input onChange={(e) => {
         const actualValue = e.currentTarget.value
         setValue(actualValue)
-    }}/></>
+    }}/> - {value} </>
 }
 
 export const GetValueOfUncontrolledInputButtonPress = () => {
