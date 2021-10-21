@@ -36,7 +36,7 @@ export const ControlledInput = () => {
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         setParentValue(e.currentTarget.value)
     }
-    return  <input value={parentValue} onChange={onChange}/>
+    return <input value={parentValue} onChange={onChange}/>
 }
 
 export const ControlledCheckbox = () => {
