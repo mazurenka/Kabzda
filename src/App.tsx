@@ -20,7 +20,9 @@ function App()  {
 
             <UncontrolledOnOff onChange={setSwitchOn}/>
 
+{/*
             <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
+*/}
             <UncontrolledAccordion titleValue={'Menu'}/>
             <UncontrolledRating value={0}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
