@@ -5,13 +5,19 @@ type PropsType = {}
 const get2DigetsString = (num: number) => num < 10 ? "0" + num : num
 
 export const Clock: React.FC<PropsType> = (props) => {
-
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {
-        setInterval(() => {
+        const setIntervalId = setInterval(() => {
+            console.log('TICK')
             setDate(new Date())
-        }, 1000)
+        }, 1000);
+
+        return () => {
+
+            clearInterval(setIntervalId)
+        }
+
     }, [])
 
     return <div>
@@ -25,6 +31,6 @@ export const Clock: React.FC<PropsType> = (props) => {
         :
         <span>{get2DigetsString(date.getMinutes())}</span>
         :
-        <span>{get2DigetsString(date.getSeconds()}</span>
+        <span>{get2DigetsString(date.getSeconds())}</span>
     </div>
 }
