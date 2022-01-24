@@ -11,5 +11,5 @@ export const BaseAnalogExample = () => {
 }
 
 export const BaseDigitalExample = () => {
-    return <Clock mode={'digital'} />
+    return <Clock mode={'digital'}/>
 }

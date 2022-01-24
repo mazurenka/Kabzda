@@ -6,7 +6,6 @@ type PropsType = {
     mode?: "digital" | "analog"
 }
 
-export const get2DigetsString = (num: number) => num < 10 ? "0" + num : num
 
 export const Clock: React.FC<PropsType> = (props) => {
     const [date, setDate] = useState(new Date())
