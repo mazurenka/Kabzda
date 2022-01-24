@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
 import {action} from "@storybook/addon-actions";
-import {Accordion} from "../Accordion/Accordion";
 import {UncontrolledAccordion} from "./UncontrolledAccordion";
 
 
@@ -12,6 +11,6 @@ export default {
 const callback = action('on of off clicked');
 
 export const ModeChanging = () => {
-    return <UncontrolledAccordion titleValue={"Menu"} />
+    return <UncontrolledAccordion titleValue={"Menu"}/>
 }
 
