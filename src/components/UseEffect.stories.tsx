@@ -16,7 +16,7 @@ export const SimpleExample = () => {
     },)
 
     useEffect(() => {
-        console.log("UseEffect only first render")
+        console.log("UseEffect only first render(ComponentDidMount")
         document.title = counter.toString();
     }, [])
 
@@ -27,8 +27,10 @@ export const SimpleExample = () => {
 
     return <>
         Hello, {counter} {fake}
-        <button onClick={() => setCounter(counter + 1)}>+</button>
-        <button onClick={() => setFake(fake + 1)}>+</button>
+
+        <button onClick={() => setFake(fake + 1)}>+ fake</button>
+
+        <button onClick={() => setCounter(counter + 1)}>+ count</button>
     </>
 }
 
