@@ -34,7 +34,7 @@ export const SimpleExample = () => {
     </>
 }
 
-export const SetTimeOutExample = () => {
+export const SetIntervalExample = () => {
     const [fake, setFake] = useState(1)
     const [counter, setCounter] = useState(1)
 
@@ -42,9 +42,13 @@ export const SetTimeOutExample = () => {
 
     useEffect(() => {
 
-        setInterval(() => {
+        const intervalId = setInterval(() => {
             setCounter((state) => state + 1)
-        }, 1)
+        }, 1000)
+
+        return () => {
+            clearInterval(intervalId)
+        }
 
     }, [])
 
@@ -101,5 +105,25 @@ export const KeysTrackerExample = () => {
 
     return <>
         Typed text: {text}
+    </>
+}
+
+export const SetTimeoutExample = () => {
+    const [text, setText] = useState('')
+
+    console.log('Component rendered ' + text)
+
+    useEffect(() => {
+
+        setTimeout(() => {
+            setText("3 sec passed")
+        }, 3000)
+        return () => {
+
+        }
+    }, [text])
+
+    return <>
+        text: {text}
     </>
 }
